@@ -4,7 +4,7 @@
     <style>
       .selector {
         background-color: #191919;
-        border: 1px solid #dadce0;
+        border: 1px solid #444444;
         color: #fff;
         font-size: 180%;
         height: 40px;
@@ -31,7 +31,7 @@
         text-align-last: center !important;
         font-family: Roboto,arial,sans-serif;
         background: url(http://ssl.gstatic.com/ui/v1/disclosure/grey-disclosure-arrow-up-down.png) 100% no-repeat #f8f9fa;
-        border: 1px solid #dadce0;
+        border: 1px solid #444444;
         font-size: 13px;
         line-height: 20px;
         padding: 5px 16px 5px 5px;
@@ -46,7 +46,7 @@
         width: 27px;
         text-align: center;
         font-size: 26px;
-        color: #70757a;
+        color: #444444;
         padding-top: 10px;
         vertical-align: top;
         margin-left: -4px;
@@ -104,8 +104,8 @@
         Tablespoon(i){return (i / 14.787).toFixed(5)},
         Fluid_oz(i){return (i / 29.574).toFixed(5)},
         Cup(i){return (i / 240).toFixed(5);},
-        Pint(i){return (i / 473).toFixed(5);},
-        Quart(i){return (i / 946).toFixed(5);},
+        Pint(i){return (i / 473.2).toFixed(5);},
+        Quart(i){return (i / 946.4).toFixed(5);},
         Gallon(i){return (i / 3785).toFixed(5);}
       },
       Liters: {
@@ -113,7 +113,7 @@
         Mililiters(i){return (this.Liters(i) * 1000).toFixed(5);},
         Liters(i){return (i / 1).toFixed(5);},
 
-        Teaspoon(i){return (i * 203).toFixed(5);},
+        Teaspoon(i){return (i * 202.9).toFixed(5);},
         Tablespoon(i){return (i * 67.628).toFixed(5)},
         Fluid_oz(i){return (i * 33.814).toFixed(5)},
         Cup(i){return (i * 4.167).toFixed(5);},
@@ -125,7 +125,7 @@
       Teaspoon: {
         name: "Teaspoon",
         Mililiters(i){return (i * 4.929).toFixed(5);},
-        Liters(i){return (i / 203).toFixed(5);},
+        Liters(i){return (i / 202.9).toFixed(5);},
 
         Teaspoon(i){return (i/1).toFixed(5);},
         Tablespoon(i){return (i/3).toFixed(5)},
@@ -172,11 +172,11 @@
         Cup(i){return (i / 1).toFixed(5);},
         Pint(i){return (i / 1.972).toFixed(5);},
         Quart(i){return (i / 3.943).toFixed(5);},
-        Gallon(i){return (i / 15.773).toFixed(5);}
+        Gallon(i){return (i / 15.772).toFixed(5);}
       },
       Pint: {
         name: "Pint",
-        Mililiters(i){return (i * 473).toFixed(5);},
+        Mililiters(i){return (i * 473.2).toFixed(5);},
         Liters(i){return (i / 2.113).toFixed(5);},
 
         Teaspoon(i){return (i*96).toFixed(5);},
@@ -189,7 +189,7 @@
       },
       Quart: {
         name: "Quart",
-        Mililiters(i){return (i * 946).toFixed(5);},
+        Mililiters(i){return (i * 946.4).toFixed(5);},
         Liters(i){return (i / 1.057).toFixed(5);},
 
         Teaspoon(i){return (i*192).toFixed(5);},
@@ -221,16 +221,16 @@
         kilogram(i){return (i/1000).toFixed(5);},
 
         oz(i){return (i / 28.35).toFixed(5);},
-        pound(i){return (this.oz(i) / 16).toFixed(5);},
-        USton(i){return (this.oz(i) / 32000).toFixed(5);}
+        pound(i){return (i / 453.6).toFixed(5);},
+        USton(i){return (i / 907185).toFixed(5);}
       },
       kilogram: {
         name: "Kilogram",
-        gram(i){return (i/1000).toFixed(5);},
+        gram(i){return (i * 1000).toFixed(5);},
         kilogram(i){return (i/1).toFixed(5);},
 
         oz(i){return (i * 35.274).toFixed(5);},
-        pound(i){return (i / 2.205).toFixed(5);},
+        pound(i){return (i * 2.205).toFixed(5);},
         USton(i){return (i / 907.185).toFixed(5);}
       },
       oz: {
@@ -244,7 +244,7 @@
       },
       pound: {
         name: "Pound",
-        gram(i){return (i*454).toFixed(5);},
+        gram(i){return (i*453.6).toFixed(5);},
         kilogram(i){return (i/2.205).toFixed(5);},
 
         oz(i){return (i * 16).toFixed(5);},
